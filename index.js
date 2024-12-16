@@ -45,7 +45,7 @@ async function analyzePatientLetter(patientLetterText, socketId) {
         io.to(socketId).emit('result_echo', 'Backend received and returned: ' + patientLetterText);
     } catch (error) {
         console.log(error);
-        io.to(socketId).emit('error', 'Error understanding your assessment: ' + error);
+        io.to(socketId).emit('error', 'Error understanding your input: ' + error);
     }
 
 }
